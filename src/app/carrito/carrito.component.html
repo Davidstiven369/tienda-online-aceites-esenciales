@@ -1,0 +1,39 @@
+<div class="container">
+  <div *ngIf="productos.length > 0; else noItems">
+    <div class="row">
+      <div class="col-md-8">
+        <h2>Carrito de Compras</h2>
+        <hr>
+        <div class="card mb-3" *ngFor="let producto of productos">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img [src]="'assets/img/' + producto.imagen" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">{{ producto.nombre }}</h5>
+                <p class="card-text">Precio: ${{ producto.precio.toFixed(2) }}</p>
+                <p class="card-text">Cantidad: {{ producto.cantidad }}</p>
+                <button class="btn btn-outline-danger btn-sm" (click)="removeFromCart(producto)">Quitar del Carrito</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <h4>Resumen de Compra</h4>
+        <ul class="list-group">
+          <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let producto of productos">
+            {{ producto.nombre }}
+            <span class="badge bg-primary rounded-pill">{{ producto.cantidad }}</span>
+          </li>
+        </ul>
+        <hr>
+        <p class="text-center">Total a Pagar: ${{ calcularTotal() }}</p>
+      </div>
+    </div>
+  </div>
+  <ng-template #noItems>
+    <p>No hay productos en el carrito.</p>
+  </ng-template>
+</div>

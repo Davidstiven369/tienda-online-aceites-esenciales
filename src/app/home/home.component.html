@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda de Aceites Esenciales</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-4Of6vSbL/JwRJ2tR5s8j0H5p9RT1dM5KdJiOasADLzrJgGi5sHhvF9koBOLy6bJnC+1T+RNVYqfLrOMxQb5C3w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    /* Custom styles */
+    .jumbotron {
+      background-color: #f8f9fa;
+      padding: 4rem 2rem;
+      margin-bottom: 2rem;
+      border-radius: 0;
+    }
+    .card {
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    footer {
+      background-color: #343a40;
+      color: #f8f9fa;
+      padding: 2rem 0;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">Tienda de Aceites Esenciales</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/productos">Productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contacto</a>
+        </li>
+        <!-- Agrega más elementos de menú según sea necesario -->
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Content -->
+<div class="container">
+  <div class="jumbotron text-center">
+    <h1 class="display-4">Bienvenido a Nuestra Tienda de Aceites Esenciales</h1>
+    <p class="lead">Explora nuestra colección de aceites esenciales de alta calidad</p>
+    <a class="btn btn-primary btn-lg" routerLink="/productos" role="button">Ver Productos</a>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="assets/img/lavanda.jpg" class="card-img-top" alt="Aceite 1">
+        <div class="card-body">
+          <h5 class="card-title">Aceite Esencial de Lavanda</h5>
+          <p class="card-text">Relájate y disfruta de los beneficios calmantes del aceite de lavanda.</p>
+          <a href="#" class="btn btn-primary">Comprar Ahora</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="assets/img/aceite2.jpg" class="card-img-top" alt="Aceite 2">
+        <div class="card-body">
+          <h5 class="card-title">Aceite Esencial de Menta</h5>
+          <p class="card-text">Revitaliza tu mente y cuerpo con el aceite de menta fresco y energizante.</p>
+          <a href="#" class="btn btn-primary">Comprar Ahora</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="assets/img/aceite3.jpg" class="card-img-top" alt="Aceite 3">
+        <div class="card-body">
+          <h5 class="card-title">Aceite Esencial de Eucalipto</h5>
+          <p class="card-text">Respira mejor y despeja tus vías respiratorias con el aceite de eucalipto.</p>
+          <a href="#" class="btn btn-primary">Comprar Ahora</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h5>Síguenos en Redes Sociales</h5>
+        <ul class="list-unstyled">
+          <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h5>Dirección</h5>
+        <p>Calle Principal, Número 123<br>Localidad, Ciudad, País</p>
+      </div>
+      <div class="col-md-4">
+        <h5>Contacto</h5>
+        <p><i class="fas fa-phone"></i> Teléfono: +123 456 789<br>
+          <i class="fas fa-envelope"></i> Email: info@tutienda.com</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-Tk3ZsAXJ3eF7w4k3YxCxVjK4z5Q+i/bF2+kAcJWqfKgWz0Qb5KJ2KjVo6qu4a1tc" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy2F8A+HA5Hz1MxtlA3Bo9Tk2hRPqz7x1r" crossorigin="anonymous"></script>
+</body>
+</html>

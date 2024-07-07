@@ -1,0 +1,41 @@
+<!-- productos.component.html -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let producto of productos">
+      <div class="product-card">
+        <img class="card-img-top" [src]="'assets/img/' + producto.imagen" alt="{{ producto.nombre }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ producto.nombre }}</h5>
+          <p class="card-text">Precio: ${{ producto.precio }}</p>
+          <p class="card-text">Cantidad disponible: {{ producto.cantidad }}</p>
+          <button class="btn" (click)="addToCart(producto)">Agregar al carrito</button>
+          <button class="btn" (click)="removeFromCart(producto)">Eliminar del carrito</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h5>Redes Sociales</h5>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h5>Dirección</h5>
+        <p>Calle Principal, Ciudad, País</p>
+      </div>
+      <div class="col-md-4">
+        <h5>Teléfono</h5>
+        <p>+1234567890</p>
+      </div>
+    </div>
+  </div>
+</footer>
